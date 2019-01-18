@@ -8,5 +8,7 @@ namespace ServicioLotoUCAB.Servicio.Logica.Comandos
         {
             return new ComandoGetData(value);
         }
+
+        
     }
 }
