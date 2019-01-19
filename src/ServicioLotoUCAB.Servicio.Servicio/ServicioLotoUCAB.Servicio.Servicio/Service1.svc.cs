@@ -20,7 +20,7 @@ namespace ServicioLotoUCAB.Servicio.Servicio
                 return BDconector.rConsult(que, quien);
             }
 
-        public object Impresion()
+        public string Impresion()
         {
             return BDconector.Imprime();
         }
