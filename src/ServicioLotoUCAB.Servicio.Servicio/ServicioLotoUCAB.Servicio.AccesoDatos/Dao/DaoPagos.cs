@@ -79,29 +79,23 @@ namespace ServicioLotoUCAB.Servicio.AccesoDatos.Dao
                     dia.nombre = lector["NOMBRE"].ToString();
                     dias.Add(dia);
                     suma += lector.FieldCount;
-                }
-                Debug.WriteLine("\nEn lector.Read estuvo " + cuenta + "veces\n");
+                }                
                 cuenta = 0;
                 foreach (Dia diaL in dias) {
                     cuenta++;
                     Debug.WriteLine("ID del dia: "+diaL.id_dia);
                     Debug.WriteLine("Nombre: "+diaL.nombre);
-                }
-               // Debug.WriteLine("En foreach estuvo " + cuenta + "veces\n");
+                }               
                 lector.Close();
                 conector.Close();
-                return ("Operacion realizada exitosamente");                                                                           
-                //return respuesta;
-               // return suma;
+                return ("Operacion realizada exitosamente");                                                                                         
             }
             catch (Exception ex)
-            {
-                Debug.WriteLine("Entro al catch");
+            {                
                 return ex.Message;                                
             }
             finally
-            {
-                Debug.WriteLine("Entro al finally");
+            {                
                 conector.Close();
             }
         }
