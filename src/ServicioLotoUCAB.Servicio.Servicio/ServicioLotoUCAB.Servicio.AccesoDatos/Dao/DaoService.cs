@@ -16,9 +16,7 @@ namespace ServicioLotoUCAB.Servicio.AccesoDatos.Dao
             }
             catch(InvalidOperationException ex)
             {
-                /*throw ExcepcionLoto(ex.Message);*/
-                /*throw Exception(ex.Message);*/
-                throw;
+                throw new ExcepcionLoto(ex.Message);                             
             }
             catch (Exception ex)
             {

@@ -11,6 +11,7 @@ namespace ServicioLotoUCAB.Servicio.Entidades
     [Serializable]
     public class Dia
     {
+               
         [DataMember(Order = 1)]
         public int id_dia { get; set; }
 

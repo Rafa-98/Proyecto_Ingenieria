@@ -1,4 +1,5 @@
 ﻿using ServicioLotoUCAB.Servicio.Logica.Comandos.ComandosService;
+using ServicioLotoUCAB.Servicio.Logica.Comandos.ComandosService.ComandosPagos;
 
 namespace ServicioLotoUCAB.Servicio.Logica.Comandos
 {
@@ -8,5 +9,12 @@ namespace ServicioLotoUCAB.Servicio.Logica.Comandos
         {
             return new ComandoGetData(value);
         }
+
+        public static ComandoPagos FabricarComandoPagos()
+        {
+            return new ComandoPagos("120");
+        }
+
+        
     }
 }
