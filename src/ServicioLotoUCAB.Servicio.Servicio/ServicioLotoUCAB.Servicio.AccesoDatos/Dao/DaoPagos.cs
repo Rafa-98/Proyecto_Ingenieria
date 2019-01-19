@@ -62,40 +62,42 @@ namespace ServicioLotoUCAB.Servicio.AccesoDatos.Dao
             }
         }
 
-        public object Imprime()
+        public string Imprime()
         {
             try
             {                
                 ArrayList dias = new ArrayList();               
                 conector.Open();
                 cmd = new MySqlCommand("SELECT ID_DIA, NOMBRE  FROM TB_DIA", conector);
-                lector = cmd.ExecuteReader();                              
+                lector = cmd.ExecuteReader();
+                int cuenta = 0;
                 while (lector.Read())
                 {
+                   cuenta++;
                     Dia dia = new Dia();                   
                     dia.id_dia = lector.GetInt32(0);
                     dia.nombre = lector["NOMBRE"].ToString();
                     dias.Add(dia);
                     suma += lector.FieldCount;
                 }
+                Debug.WriteLine("\nEn lector.Read estuvo " + cuenta + "veces\n");
+                cuenta = 0;
                 foreach (Dia diaL in dias) {
-                    //EWM
-                    
+                    cuenta++;
                     Debug.WriteLine("ID del dia: "+diaL.id_dia);
                     Debug.WriteLine("Nombre: "+diaL.nombre);
                 }
+               // Debug.WriteLine("En foreach estuvo " + cuenta + "veces\n");
                 lector.Close();
                 conector.Close();
-                return dias;                                             
-                //Console.Write(respuesta);               
+                return ("Operacion realizada exitosamente");                                                                           
                 //return respuesta;
                // return suma;
             }
             catch (Exception ex)
             {
-                //return ex.Message;
                 Debug.WriteLine("Entro al catch");
-                return null;
+                return ex.Message;                                
             }
             finally
             {

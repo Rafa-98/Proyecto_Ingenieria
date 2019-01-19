@@ -14,7 +14,7 @@ namespace ServicioLotoUCAB.Servicio.Servicio
 
         [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
-         object Impresion();
+         string Impresion();
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
