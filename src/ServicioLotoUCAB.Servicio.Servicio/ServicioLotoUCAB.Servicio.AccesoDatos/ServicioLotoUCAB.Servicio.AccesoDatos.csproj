@@ -49,6 +49,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ServicioLotoUCAB.Servicio.Entidades\ServicioLotoUCAB.Servicio.Entidades.csproj">
+      <Project>{4914A281-FE00-4013-9BD4-8A5DBA4D92EC}</Project>
+      <Name>ServicioLotoUCAB.Servicio.Entidades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ServicioLotoUCAB.Servicio.Excepciones\ServicioLotoUCAB.Servicio.Excepciones.csproj">
       <Project>{124654e0-7615-42cd-9016-d3f7dbaf6447}</Project>
       <Name>ServicioLotoUCAB.Servicio.Excepciones</Name>

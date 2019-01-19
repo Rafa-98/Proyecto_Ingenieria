@@ -35,3 +35,7 @@ C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Serv
 C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.Servicio\bin\ServicioLotoUCAB.Servicio.AccesoDatos.pdb
 C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.Servicio\bin\ServicioLotoUCAB.Servicio.Logica.Comandos.pdb
 C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.Servicio\bin\MySql.Data.xml
+C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.Servicio\bin\ServicioLotoUCAB.Servicio.Entidades.dll
+C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.Servicio\bin\ServicioLotoUCAB.Servicio.Entidades.pdb
+C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.Servicio\bin\ServicioLotoUCAB.Servicio.Excepciones.dll
+C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.Servicio\bin\ServicioLotoUCAB.Servicio.Excepciones.pdb

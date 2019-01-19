@@ -13,6 +13,10 @@ namespace ServicioLotoUCAB.Servicio.Servicio
         string Consulta(string que, string quien);
 
         [OperationContract]
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json)]
+         object Impresion();
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
     }
 

@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Comando.cs" />
     <Compile Include="ComandosService\ComandoGetData.cs" />
+    <Compile Include="ComandosService\ComandosPagos\ComandoPagos.cs" />
     <Compile Include="FabricaComandos.cs" />
     <Compile Include="IComando.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

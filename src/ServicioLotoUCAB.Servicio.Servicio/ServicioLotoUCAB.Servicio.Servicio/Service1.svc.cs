@@ -20,6 +20,11 @@ namespace ServicioLotoUCAB.Servicio.Servicio
                 return BDconector.rConsult(que, quien);
             }
 
+        public object Impresion()
+        {
+            return BDconector.Imprime();
+        }
+
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

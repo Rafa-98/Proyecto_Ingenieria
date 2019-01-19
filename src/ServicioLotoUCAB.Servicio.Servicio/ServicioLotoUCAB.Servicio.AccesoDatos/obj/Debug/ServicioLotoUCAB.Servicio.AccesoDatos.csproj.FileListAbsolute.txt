@@ -27,3 +27,5 @@ C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Serv
 C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.AccesoDatos\bin\Debug\Google.Protobuf.dll
 C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.AccesoDatos\bin\Debug\ServicioLotoUCAB.Servicio.Excepciones.pdb
 C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.AccesoDatos\bin\Debug\MySql.Data.xml
+C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.AccesoDatos\bin\Debug\ServicioLotoUCAB.Servicio.Entidades.dll
+C:\Users\user\Desktop\Proyecto_Ing\Proyecto_Ingenieria\src\ServicioLotoUCAB.Servicio.Servicio\ServicioLotoUCAB.Servicio.AccesoDatos\bin\Debug\ServicioLotoUCAB.Servicio.Entidades.pdb

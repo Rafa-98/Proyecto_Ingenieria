@@ -89,6 +89,10 @@
       <Project>{6907d65b-db97-4099-ab59-fff0ae8bc6e7}</Project>
       <Name>ServicioLotoUCAB.Servicio.AccesoDatos</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ServicioLotoUCAB.Servicio.Entidades\ServicioLotoUCAB.Servicio.Entidades.csproj">
+      <Project>{4914A281-FE00-4013-9BD4-8A5DBA4D92EC}</Project>
+      <Name>ServicioLotoUCAB.Servicio.Entidades</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ServicioLotoUCAB.Servicio.Logica.Comandos\ServicioLotoUCAB.Servicio.Logica.Comandos.csproj">
       <Project>{91323553-ecf4-4cf8-9c47-6c46d5cce5c5}</Project>
       <Name>ServicioLotoUCAB.Servicio.Logica.Comandos</Name>
