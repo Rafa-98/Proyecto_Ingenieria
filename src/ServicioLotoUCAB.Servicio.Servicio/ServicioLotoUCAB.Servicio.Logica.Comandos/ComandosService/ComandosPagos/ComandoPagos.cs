@@ -14,7 +14,7 @@ namespace ServicioLotoUCAB.Servicio.Logica.Comandos.ComandosService.ComandosPago
 
         public ComandoPagos(string serial)
         {
-            DBpagos = new DaoPagos(serial);
+            DBpagos = new DaoPagos();
             this.serial = serial;
         }
 

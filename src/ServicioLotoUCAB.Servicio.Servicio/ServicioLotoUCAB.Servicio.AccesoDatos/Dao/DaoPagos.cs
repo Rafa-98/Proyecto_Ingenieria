@@ -18,17 +18,48 @@ namespace ServicioLotoUCAB.Servicio.AccesoDatos.Dao
         string respuesta = null;
         int suma = 0;
         MySqlCommand cmd = null;
-        MySqlDataReader lector = null;       
+        MySqlDataReader lector = null;
+        string serial;
 
         public DaoPagos()
         {
             conector = new MySqlConnection(ConfigurationManager.ConnectionStrings["MySql.Equipo9"].ConnectionString);
         }
 
-        // LO OFICIAL DEL PROYECTO -----------------------------------------------
-        public DaoPagos(string serial)
+        
+        // LO OFICIAL DEL PROYECTO --------------------------------------------------------------------        
+
+        public string pago(string serial)
         {
-            // DEBEMOS IMPLEMENTARLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+            this.serial = serial;
+            string transaccion = "Vacio";
+            transaccion = actualizarEstatus();
+            return transaccion;
+        }
+
+        public string actualizarEstatus()
+        {
+            Resultado resultado;
+            Sorteo sorteo;
+            Jugada jugada;
+
+            try
+            {
+                conector.Open();
+                cmd = new MySqlCommand("UPDATE tb_resultado,tb_sorteo,tb_jugada,tb_dia_sorteo set tb_jugada.ESTATUS = 0 where tb_resultado.ID_RESULTADO = 2 and tb_resultado.ID_SORTEO = tb_dia_sorteo.ID_SORTEO and tb_jugada.ID_DIASORTEO = tb_dia_sorteo.ID_DIASORTEO and tb_jugada.ID_ITEM <> tb_resultado.ID_ITEM", conector);
+                lector = cmd.ExecuteReader();
+                return "Transaccion realizada con exito!";
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Ha ocurrido un error...\n");
+                return ex.Message;
+            }
+            finally
+            {
+                conector.Close();
+                lector.Close();
+            }
         }
 
         // ------------------------------------------------------------------------------
