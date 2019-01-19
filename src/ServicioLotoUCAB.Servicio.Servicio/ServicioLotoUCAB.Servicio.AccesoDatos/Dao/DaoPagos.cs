@@ -22,7 +22,7 @@ namespace ServicioLotoUCAB.Servicio.AccesoDatos.Dao
 
         public DaoPagos()
         {
-            conector = new MySqlConnection(ConfigurationManager.ConnectionStrings["LocalMySql"].ConnectionString);
+            conector = new MySqlConnection(ConfigurationManager.ConnectionStrings["MySql.Equipo9"].ConnectionString);
         }
 
         // LO OFICIAL DEL PROYECTO -----------------------------------------------
