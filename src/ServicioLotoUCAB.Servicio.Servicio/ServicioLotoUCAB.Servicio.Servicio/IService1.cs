@@ -17,6 +17,10 @@ namespace ServicioLotoUCAB.Servicio.Servicio
          string Impresion();
 
         [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "/Pago", ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]
+        string Pago(string serial);
+
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
     }
 
