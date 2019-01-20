@@ -41,6 +41,7 @@ namespace ServicioLotoUCAB.Servicio.Servicio
 
 
 
+
         public string Pago(string serial)
         {
             return BDconector2.pago(serial);
