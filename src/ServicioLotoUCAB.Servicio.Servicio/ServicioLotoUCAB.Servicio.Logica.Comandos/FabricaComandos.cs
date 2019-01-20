@@ -10,11 +10,10 @@ namespace ServicioLotoUCAB.Servicio.Logica.Comandos
             return new ComandoGetData(value);
         }
 
-        public static ComandoPagos FabricarComandoPagos()
+        public static ComandoPagos FabricarComandoPagos(string serial)
         {
-            return new ComandoPagos("120");
+            return new ComandoPagos(serial);
         }
-
         
     }
 }

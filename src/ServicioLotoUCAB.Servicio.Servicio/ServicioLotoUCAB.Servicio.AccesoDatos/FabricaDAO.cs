@@ -13,5 +13,10 @@ namespace ServicioLotoUCAB.Servicio.AccesoDatos
         {
             return new DaoService();
         }
+
+        public static DaoPagos crearDaoPagos()
+        {
+            return new DaoPagos();
+        }
     }
 }

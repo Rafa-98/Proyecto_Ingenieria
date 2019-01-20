@@ -14,20 +14,42 @@ namespace ServicioLotoUCAB.Servicio.AccesoDatos.Dao
     public class DaoPagos
     {
        
-        MySqlConnection conector = null;
-        string respuesta = null;
-        int suma = 0;
+        MySqlConnection conector = null;             
         MySqlCommand cmd = null;
         MySqlDataReader lector = null;
         string serial;
+        string respuesta = null;
 
         public DaoPagos()
         {
             conector = new MySqlConnection(ConfigurationManager.ConnectionStrings["MySql.Equipo9"].ConnectionString);
         }
 
-        
-        // LO OFICIAL DEL PROYECTO --------------------------------------------------------------------        
+
+        // LO OFICIAL DEL PROYECTO --------------------------------------------------------------------   
+        public void cambiarEstatusTicketPerdedores()
+        {
+            try
+            {
+                conector.Open();
+                // Tenemos que cambiar la siguiente linea, para trabajarlo desde c# con objetos: resultado, sorteo, jugada.
+                cmd = new MySqlCommand("UPDATE tb_resultado,tb_sorteo,tb_jugada,tb_dia_sorteo set tb_jugada.ESTATUS = 0 where tb_resultado.ID_RESULTADO = 2 and tb_resultado.ID_SORTEO = tb_dia_sorteo.ID_SORTEO and tb_jugada.ID_DIASORTEO = tb_dia_sorteo.ID_DIASORTEO and tb_jugada.ID_ITEM <> tb_resultado.ID_ITEM", conector);
+                lector = cmd.ExecuteReader();                
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Ha ocurrido un error. Excepcion: "+ex.Message+"\n");                
+            }
+            finally
+            {
+                conector.Close();
+                lector.Close();
+            }
+        }
+
+        //--------------------------------------------------------------------------------------------------------------------------------
+
+
 
         public string pago(string serial)
         {
@@ -47,7 +69,7 @@ namespace ServicioLotoUCAB.Servicio.AccesoDatos.Dao
             {
                 conector.Open();
                 cmd = new MySqlCommand("UPDATE tb_resultado,tb_sorteo,tb_jugada,tb_dia_sorteo set tb_jugada.ESTATUS = 0 where tb_resultado.ID_RESULTADO = 2 and tb_resultado.ID_SORTEO = tb_dia_sorteo.ID_SORTEO and tb_jugada.ID_DIASORTEO = tb_dia_sorteo.ID_DIASORTEO and tb_jugada.ID_ITEM <> tb_resultado.ID_ITEM", conector);
-                lector = cmd.ExecuteReader();
+                lector = cmd.ExecuteReader();                
                 return "Transaccion realizada con exito!";
             }
             catch (Exception ex)
@@ -109,7 +131,7 @@ namespace ServicioLotoUCAB.Servicio.AccesoDatos.Dao
                     dia.id_dia = lector.GetInt32(0);
                     dia.nombre = lector["NOMBRE"].ToString();
                     dias.Add(dia);
-                    suma += lector.FieldCount;
+                    //suma += lector.FieldCount;
                 }                
                 cuenta = 0;
                 foreach (Dia diaL in dias) {
