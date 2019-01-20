@@ -1,6 +1,7 @@
 ﻿using ServicioLotoUCAB.Servicio.AccesoDatos.Dao;
 using ServicioLotoUCAB.Servicio.Logica.Comandos;
 using ServicioLotoUCAB.Servicio.Logica.Comandos.ComandosService;
+using ServicioLotoUCAB.Servicio.Logica.Comandos.ComandosService.ComandosPagos;
 using System;
 using System.Net;
 using System.ServiceModel.Web;
@@ -14,18 +15,38 @@ namespace ServicioLotoUCAB.Servicio.Servicio
     {
 
         // DEL PROYECTO OFICIALMENTE ---------------------------------------------
-
-        DaoPagos BDconector = new DaoPagos();
-
-        public string Pago(string serial)
+       
+        public string GestionarPago(string serial)
         {
-            return BDconector.pago(serial);
+            ComandoPagos comandoPagos = FabricaComandos.FabricarComandoPagos(serial);
+            return comandoPagos.pagar();
         }
 
         //-------------------------------------------------------------------
 
 
-            DaoPagos BDconector2 = new DaoPagos();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public string Pago(string serial)
+        {
+            return BDconector2.pago(serial);
+        }
+
+        DaoPagos BDconector2 = new DaoPagos();
 
             public string Consulta(string que, string quien)
             {

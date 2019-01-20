@@ -1,4 +1,5 @@
-﻿using ServicioLotoUCAB.Servicio.AccesoDatos.Dao;
+﻿using ServicioLotoUCAB.Servicio.AccesoDatos;
+using ServicioLotoUCAB.Servicio.AccesoDatos.Dao;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,14 +15,21 @@ namespace ServicioLotoUCAB.Servicio.Logica.Comandos.ComandosService.ComandosPago
 
         public ComandoPagos(string serial)
         {
-            DBpagos = new DaoPagos();
+            DBpagos = FabricaDAO.crearDaoPagos();
             this.serial = serial;
         }
 
-        public float pagar()
+        public string pagar()
         {
-            return 0;
-        }
+            try {
+                DBpagos.cambiarEstatusTicketPerdedores();               
+                return "Por ahora, solo se cambio el estatus de los ticket perdedores";
+            }            
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }        
 
     }
 }
